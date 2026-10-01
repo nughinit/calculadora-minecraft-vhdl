@@ -1,0 +1,12 @@
+# Arquivos gerados pelo GHDL e pelos simuladores
+*.o
+*.cf
+*.ghw
+*.vcd
+*.fst
+work-obj*.cf
+e~*.o
+
+# Arquivos de editor / sistema
+.vscode/
+.DS_Store
