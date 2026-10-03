@@ -63,6 +63,11 @@ begin
     assert (S = '0' and C = '1')
       report "FALHA em A=1 B=1: esperado S=0 C=1" severity error;
 
+    -- Volta as entradas a 0 para gerar um evento em 40 ns,
+    -- assim o arquivo VCD cobre o intervalo inteiro do caso 1 + 1.
+    A <= '0'; B <= '0';
+    wait for 10 ns;
+
     report "TESTE OK: as 4 combinacoes foram verificadas" severity note;
 
     wait;  -- suspende o processo para sempre, encerrando a simulacao
